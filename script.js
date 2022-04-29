@@ -1,3 +1,7 @@
+const submitButton = document.getElementById('addNewBookButton');
+
+
+
 //Book constructor
 function Book(author, title, pages, read) { 
     this.author = author
@@ -5,3 +9,7 @@ function Book(author, title, pages, read) {
     this.pages = pages 
     this.read = read
 }
+
+submitButton.addEventListener('click', () => {
+    
+})
