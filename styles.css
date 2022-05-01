@@ -24,7 +24,7 @@ body {
     background: lightgreen;
     grid-area: 2/1/-1/-1;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: minmax(100px,1fr) 5fr;
 }
 
 .formContainer {
@@ -41,13 +41,17 @@ body {
 .bookContainer {
     grid-area: 1/2/-1/-1;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-flow:column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow:row;
 }
 
 .bookElements {
+    width: minmax();
+    height: 20rem;
     background: lightyellow;
     border: 5px solid black;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

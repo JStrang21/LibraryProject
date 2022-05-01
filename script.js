@@ -29,7 +29,7 @@ function addBookToGrid(newBook) {
     const bookGridContainer = document.querySelector('.bookContainer');
     let bookElement = document.createElement('div');
     bookElement.classList.add('bookElements');
-    //Adds element to grid which will contain one instance of book object 
+    //Adds element to grid
     bookGridContainer.appendChild(bookElement);
     //Passes newly created grid element and book object to function to create and store sub-elements of input
     addBookInfoToGridElement(bookElement, newBook);
