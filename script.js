@@ -64,7 +64,7 @@ function addBookInfoToGridElement(bookElement, newBook) {
 
     const deleteButtonListener = document.querySelector(`.deleteButton${bookLibrary.length}`);
     deleteButtonListener.addEventListener('click', () => {
-        console.log(deleteButton)
+        bookElement.remove()
     })
 }
 
