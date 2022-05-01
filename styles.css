@@ -48,4 +48,6 @@ body {
 .bookElements {
     background: lightyellow;
     border: 5px solid black;
+    display: flex;
+    flex-direction: column;
 }

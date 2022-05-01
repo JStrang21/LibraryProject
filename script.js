@@ -29,5 +29,17 @@ function addBookToGrid(newBook) {
     let bookElement = document.createElement('div');
     bookElement.classList.add('bookElements');
     bookGridContainer.appendChild(bookElement);
+    addBookInfoToGridElement(bookElement, newBook);
 }
 
+function addBookInfoToGridElement(bookElement, newBook) {
+    let titleElement = document.createElement('p');
+    let authorElement = document.createElement('p');
+    let pagesElement = document.createElement('p');
+    let readElement = document.createElement('p');
+    bookElement.appendChild(titleElement);
+    bookElement.appendChild(authorElement);
+    bookElement.appendChild(pagesElement);
+    bookElement.appendChild(readElement);
+    
+}
