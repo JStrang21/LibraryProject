@@ -1,1 +1,2 @@
 # LibraryProject
+Creating a library app using HTML, CSS, and Vanilla JS. I will be using what I learned about objects, classes, prototypes, and inheritance to practice by building a library which stores information about books. I will be using a form to ask for user input and then Javascript to create grid elements and add the user input to the elements.
