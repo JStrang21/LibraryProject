@@ -2,11 +2,21 @@ const submitButton = document.getElementById('addNewBookButton');
 let bookLibrary = [];
 
 //Book constructor
-function Book(author, title, pages, read) { 
-    this.author = author
-    this.title = title 
-    this.pages = pages 
-    this.read = read
+class Book { 
+    constructor(author, title, pages, read) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.read = read;
+    }
+    readBook() {
+        if (this.read == true) {
+            return false 
+        }
+        else {
+            return true
+        }
+    }
 }
 
 submitButton.addEventListener('click', () => {
@@ -35,8 +45,6 @@ function addBookToGrid(newBook) {
     addBookInfoToGridElement(bookElement, newBook);
     //Resets form input after adding a book
     clearForm();
-
-    
 }
 
 function addBookInfoToGridElement(bookElement, newBook) {
@@ -66,36 +74,32 @@ function addBookInfoToGridElement(bookElement, newBook) {
     authorElement.innerHTML = newBook.author
     pagesElement.innerHTML = newBook.pages
 
-    if (newBook.read == true) {
+    /*if (newBook.read == true) {
         readElement.innerHTML = 'Read'
     }
-    else {
+    else if (newBook.read == false) {
         readElement.innerHTML = 'Not Read'
-    }
-
-    const toggleButtonListener = document.querySelector(`.readButton${bookLibrary.length}`);
-    toggleButtonListener.addEventListener('click', () => {
-        
-        
-        
-        
-        /*const readCheck = document.getElementById('read');
-        if (readCheck) {
-            readElement.innerHTML = 'Not Read'
-            console.log(readCheck)
-        }
-        else if (readCheck != on) {
-            readElement.innerHTML = 'Read'
-        }
-        else {
-            console.log('no')
-        }*/
-    })
+    }*/
 
     const deleteButtonListener = document.querySelector(`.deleteButton${bookLibrary.length}`);
     deleteButtonListener.addEventListener('click', () => {
         bookElement.remove()
     })
+
+    const toggleButtonListener = document.querySelector(`.readButton${bookLibrary.length}`);
+    toggleButtonListener.addEventListener('click', () => {
+        if (newBook.read) {
+            readElement.innerHTML = 'Read'
+            return newBook.read = false;
+        }
+        else if (newBook.read == false) {
+            readElement.innerHTML = 'Not Read'
+            return newBook.read = true;
+        }
+        else {
+            console.log('wrong');
+        }
+    }) 
 }
 
 function clearForm() {
