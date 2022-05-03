@@ -1,7 +1,5 @@
 const submitButton = document.getElementById('addNewBookButton');
 let bookLibrary = [];
-let deleteButtonArray = [];
-
 
 //Book constructor
 function Book(author, title, pages, read) { 
@@ -37,6 +35,8 @@ function addBookToGrid(newBook) {
     addBookInfoToGridElement(bookElement, newBook);
     //Resets form input after adding a book
     clearForm();
+
+    
 }
 
 function addBookInfoToGridElement(bookElement, newBook) {
@@ -47,20 +47,50 @@ function addBookInfoToGridElement(bookElement, newBook) {
     let readElement = document.createElement('p');
     
     let deleteButton = document.createElement('button');
-    deleteButton.classList.add(`deleteButton${bookLibrary.length}`) 
+    deleteButton.classList.add(`deleteButton${bookLibrary.length}`); 
     deleteButton.innerHTML = 'Delete';
-    deleteButtonArray.push(deleteButton);
+
+    let readToggleButton = document.createElement('button');
+    readToggleButton.classList.add(`readButton${bookLibrary.length}`);
+    readToggleButton.innerHTML = 'Read';
+    
 
     bookElement.appendChild(titleElement);
     bookElement.appendChild(authorElement);
     bookElement.appendChild(pagesElement);
     bookElement.appendChild(readElement);
     bookElement.appendChild(deleteButton);
+    bookElement.appendChild(readToggleButton);
     
     titleElement.innerHTML = newBook.title
     authorElement.innerHTML = newBook.author
     pagesElement.innerHTML = newBook.pages
-    readElement.innerHTML = newBook.read
+
+    if (newBook.read == true) {
+        readElement.innerHTML = 'Read'
+    }
+    else {
+        readElement.innerHTML = 'Not Read'
+    }
+
+    const toggleButtonListener = document.querySelector(`.readButton${bookLibrary.length}`);
+    toggleButtonListener.addEventListener('click', () => {
+        
+        
+        
+        
+        /*const readCheck = document.getElementById('read');
+        if (readCheck) {
+            readElement.innerHTML = 'Not Read'
+            console.log(readCheck)
+        }
+        else if (readCheck != on) {
+            readElement.innerHTML = 'Read'
+        }
+        else {
+            console.log('no')
+        }*/
+    })
 
     const deleteButtonListener = document.querySelector(`.deleteButton${bookLibrary.length}`);
     deleteButtonListener.addEventListener('click', () => {
