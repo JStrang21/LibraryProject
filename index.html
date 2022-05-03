@@ -11,7 +11,7 @@
 <body>
     <div class='header'>
         <img src="" alt="book icon">
-        <div>Book Library</div>
+        <h3>Book Library</h3>
         <button id='formToggle'>Add New Book</button>
     </div>
 
@@ -21,24 +21,23 @@
         </div>
 
         <div class='formContainer'  id='formContainerVisibility'>
-            <button class='newBookButton formButton'>New Book</button>
             <form class='newBookForm'>
-                <div>Enter Book Info</div>
+                <h4>Enter Book Info</h4>
                 <ul class='formInputContainer'>
                     <li class='formInput'>
-                        <label for="title">Title:</label>
+                        <label for="title">Book Title:</label>
                         <input type="text" name='title' id='title'>
                     </li>
                     <li class='formInput'>
-                        <label for="author">Author:</label>
+                        <label for="author">Book Author:</label>
                         <input type="text" name='author' id='author'>
                     </li>
                     <li class='formInput'>
-                        <label for="pages">Pages:</label>
+                        <label for="pages">Number of Pages:</label>
                         <input type="number" name='pages' id='pages'>
                     </li>
-                    <li class='formInput'>
-                        <label for="read">Read:</label>
+                    <li class='formInput' id='checkboxContainer'>
+                        <label for="read">Check if Book is Read:</label>
                         <input type="checkbox" name='read' id='read'>
                     </li>
                 </ul>

@@ -68,11 +68,17 @@ body {
     padding-bottom: 1rem;
 }
 
-.newBookForm > div {
+.newBookForm > h4 {
     display: flex;
     justify-content: center;
 }
 
 ul {
     padding-inline-start: 0;
+}
+
+#checkboxContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
