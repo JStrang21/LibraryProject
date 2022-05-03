@@ -74,12 +74,12 @@ function addBookInfoToGridElement(bookElement, newBook) {
     authorElement.innerHTML = newBook.author
     pagesElement.innerHTML = newBook.pages
 
-    /*if (newBook.read == true) {
+    if (newBook.read == true) {
         readElement.innerHTML = 'Read'
     }
     else if (newBook.read == false) {
         readElement.innerHTML = 'Not Read'
-    }*/
+    }
 
     const deleteButtonListener = document.querySelector(`.deleteButton${bookLibrary.length}`);
     deleteButtonListener.addEventListener('click', () => {
@@ -89,11 +89,11 @@ function addBookInfoToGridElement(bookElement, newBook) {
     const toggleButtonListener = document.querySelector(`.readButton${bookLibrary.length}`);
     toggleButtonListener.addEventListener('click', () => {
         if (newBook.read) {
-            readElement.innerHTML = 'Read'
+            readElement.innerHTML = 'Not Read'
             return newBook.read = false;
         }
         else if (newBook.read == false) {
-            readElement.innerHTML = 'Not Read'
+            readElement.innerHTML = 'Read'
             return newBook.read = true;
         }
         else {
