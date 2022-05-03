@@ -109,3 +109,19 @@ function clearForm() {
     document.getElementById('read').checked = ""
 }
 
+
+const formToggleButton = document.getElementById('formToggle');
+const formContainer = document.getElementById('formContainerVisibility');
+//Counter to switch between hidden and visible form based on if counter is even or uneven
+let i = 0;
+//Button to make the form hidden or unhidden so user can add a book
+formToggleButton.addEventListener('click', () => {
+    if (i % 2 == 0) {
+        formContainer.style.visibility = 'visible';
+        i++
+    }
+    else {
+        formContainer.style.visibility = 'hidden';
+        i++
+    }
+})

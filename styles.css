@@ -37,6 +37,7 @@ body {
     justify-items: flex-start;
     background: rgb(238, 238, 216);
     box-shadow: 1px 0px lightyellow;
+    visibility: hidden;
 }
 
 .formInput {
