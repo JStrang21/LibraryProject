@@ -110,7 +110,7 @@ function clearForm() {
 }
 
 
-const formToggleButton = document.getElementById('formToggle');
+/*const formToggleButton = document.getElementById('formToggle');
 const formContainer = document.getElementById('formContainerVisibility');
 //Counter to switch between hidden and visible form based on if counter is even or uneven
 let i = 0;
@@ -124,4 +124,4 @@ formToggleButton.addEventListener('click', () => {
         formContainer.style.visibility = 'hidden';
         i++
     }
-})
+})*/
