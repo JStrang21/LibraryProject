@@ -61,8 +61,8 @@ function addBookInfoToGridElement(bookElement, newBook) {
     bookElement.appendChild(authorElement);
     bookElement.appendChild(pagesElement);
     bookElement.appendChild(readElement);
-    bookElement.appendChild(deleteButton);
     bookElement.appendChild(readToggleButton);
+    bookElement.appendChild(deleteButton);
     
     //Sub-elements display text set to input of book instance
     titleElement.innerHTML = newBook.title
@@ -110,7 +110,7 @@ function clearForm() {
 }
 
 
-/*const formToggleButton = document.getElementById('formToggle');
+const formToggleButton = document.getElementById('formToggle');
 const formContainer = document.getElementById('formContainerVisibility');
 //Counter to switch between hidden and visible form based on if counter is even or uneven
 let i = 0;
@@ -124,4 +124,4 @@ formToggleButton.addEventListener('click', () => {
         formContainer.style.visibility = 'hidden';
         i++
     }
-})*/
+})
